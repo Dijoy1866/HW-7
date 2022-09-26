@@ -4,20 +4,22 @@
 # указал больше загаданного числа, то нужно вывести "Бери меньше" и наоборот.
 
 
-from random import randint
+import  random
 
-n = randint(0, 10)
-i = 0
-while True:
-    a = int(input('Введите число:'))
-    if a == n:
+n = 0
+for i in range(1, 11):
+
+    print(f'Попытка №', n+1)
+    a = int(input(':'))
+
+    if a == i:
         print('Ты угадал!')
         break
-    if a < n:
+    if a < i:
         print('Бери больше')
     else:
         print('Бери меньше')
-    i += 1
-    if i == 3:
-        print(f'Проиграл.')
+    n += 1
+    if n == 3:
+
         break
